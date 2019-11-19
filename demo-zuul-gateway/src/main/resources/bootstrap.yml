@@ -1,0 +1,19 @@
+---
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: demo-zuul
+  cloud:
+    config:
+      profile: 
+      discovery:
+        enabled: true
+        service-id: demo-cloud-config
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8282/eureka}
+      

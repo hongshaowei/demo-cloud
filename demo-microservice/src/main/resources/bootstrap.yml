@@ -1,0 +1,19 @@
+---
+server:
+  port: 9000
+
+spring:
+  application:
+    name: demo-microservice
+  cloud: 
+    config:
+      profile: microservice
+      discovery:
+        enabled: true
+        service-id: demo-cloud-config
+        
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8282/eureka}
+      
