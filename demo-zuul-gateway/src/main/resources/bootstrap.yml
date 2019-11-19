@@ -15,5 +15,16 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8282/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:8282/eureka} # http://${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/ ${external properties}
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://demo-auth-server/uaa/oauth/token # token endpoint
+      user-authorization-uri: http://demo-auth-server/uaa/oauth/authorize # authorization endpoint
+      client-id: zuul_server # oauth2 client id
+      client-secret: secret # oauth2 client secret
+    resource:
+      jwt:
+        key-value: springcloud13 # symmetric-key algorithm : HS256
       
