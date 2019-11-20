@@ -20,8 +20,8 @@ eureka:
 security:
   oauth2:
     client:
-      access-token-uri: http://demo-auth-server/uaa/oauth/token # token endpoint
-      user-authorization-uri: http://demo-auth-server/uaa/oauth/authorize # authorization endpoint
+      access-token-uri: http://localhost:7777/uaa/oauth/token # token endpoint
+      user-authorization-uri: http://localhost:7777/uaa/oauth/authorize # authorization endpoint
       client-id: zuul_server # oauth2 client id
       client-secret: secret # oauth2 client secret
     resource:
